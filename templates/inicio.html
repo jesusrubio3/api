@@ -1,0 +1,14 @@
+{%extends "base.html" %}
+{%block tittle%}
+<title>Inicio</title>
+{%endblock%}
+{%block contenido%}
+<div class="lista">
+    {% for i,j in e %}
+    <ul>
+        
+        <li><a href="/cripto/{{ i }}"><strong>{{ i }}</strong></a> valor actual <strong>{{j}} dolares</strong></li>
+    </ul>
+    {%- endfor -%}
+</div>
+{% endblock %}

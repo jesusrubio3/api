@@ -1,0 +1,20 @@
+{%extends "base.html" %}
+{%block tittle%}
+<title>Conversor</title>
+{%endblock%}
+{%block contenido%}
+<form action="/conv" method="post">
+    <label>Cantidad:</label>
+    <input type="text" name="numero1" required/>
+    <select name="monedas">
+        {% for data in datas %}
+            {% if seleccionado==data.name %}
+                <option selected value="{{data.id}}">{{data.name}}</option>
+            {% else %}
+                <option  value="{{data.id}}">{{data.name}}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <input type="submit" value="Enviar"/>
+</form>
+{%endblock%}

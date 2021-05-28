@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    {%block tittle%}
+    <title>Document</title>
+    {%endblock%}
+</head>
+<body>
+    <div class="fondo">
+        <img class="fondo-imagen" src="../static/fondo.jpg" alt="imagen de criptomonedas">
+    </div>
+    <header>
+        <div class="overlay">
+            <x-sign>
+                <small>CRIPTOMONEDAS</small><br>
+            </x-sign>
+    <h2>LAS DIVISAS DEL FUTURO... Y PRESENTE</h2>
+    <h3>“Bitcoin es un logro criptográfico notable y la capacidad de crear algo que no es duplicable en el mundo digital tiene un enorme valor”. Eric Schmidt.</h3>
+        <br>
+        <button><a href="/">INICIO</a></button>
+        <button><a href="/conv">CONVERSOR</a></button>
+            </div>
+    </header>
+
+    <div class="content">
+        {% block contenido %}{%endblock%}
+    </div>
+</body>
+</html>

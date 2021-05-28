@@ -1,0 +1,20 @@
+{%extends "base.html" %}
+{%block tittle%}
+<title>Detalles</title>
+{%endblock%}
+{%block contenido%}
+    {% for i in data %}
+    {% if cripto==i.name %}
+    <h1>{{i.name}}</h1>
+    <p>Símbolo: {{i.symbol}}.</p>
+    {% if i.max_supply!=None %}
+    <p>Número máximo de monedas en circulación: {{i.max_supply}}.</p>
+    {% endif -%}
+    <p>Número de monedas en circulación: {{i.circulating_supply}}</p>
+    <p>Ránking: {{i.cmc_rank}}.</p>
+    <p>Precio: {{ i.quote.USD.price }} dólares.</p>
+    <p>Volúmen en las últimas 24 horas: {{ i.quote.USD.volume_24h }} dólares.</p>
+    
+    {% endif -%}
+    {% endfor -%}
+{%endblock%}
